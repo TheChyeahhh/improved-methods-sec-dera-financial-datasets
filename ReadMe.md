@@ -29,9 +29,7 @@ The free edition of the Anaconda distribution of Python available from https://w
 - matplotlib
 - seaborn
 - IPython
-- io
 - requests
-- zipfile
 
 ### Examples
 
@@ -49,7 +47,7 @@ The free edition of the Anaconda distribution of Python available from https://w
 To run these examples, you need to install the required Python libraries. You can install them using pip:
 
 ---
-`pip install pandas numpy matplotlib seaborn IPython`
+`pip install pandas numpy matplotlib seaborn IPython requests`
 
 OR 
 
@@ -65,7 +63,7 @@ OR
 `python Populate_Data.py`  
   
    Alternatively, data can be downloaded manually from the DERA Data Library.\
-   `cd python-for-dera-financial-datasets/examples`\
+   `cd python-for-dera-financial-datasets\examples`\
    Create a new subfolder named data\
    Download the zip files for data sets in data folder from the following URLs and unzip them.
 
@@ -75,10 +73,10 @@ OR
 - https://www.sec.gov/files/dera/data/financial-statement-data-sets/2022q4.zip
 - https://www.sec.gov/files/dera/data/financial-statement-notes-data-sets/2024_02_notes.zip
 
-3. Jupyter notebooks are in the examples folder. These notebooks have been saved with output so that you know what to expect after running the code. To run the examples, open Jupyter notebook from command prompt or shell:\
+3. Juptyer notebooks are in the examples folder. These notebooks have been saved with output so that you know what to expect after running the code. To run the examples, open Jupyter notebook from command prompt or shell:\
 `jupyter notebook`
 
 4. From the examples webpage in Jupyter, you can select a specific example of interest to run.
 
 
-**Suggestions directed to StructuredData (at) sec.gov regarding code examples are welcome.**
+**Suggestions directed to StructuredData@sec.gov regarding code examples are welcome.**
