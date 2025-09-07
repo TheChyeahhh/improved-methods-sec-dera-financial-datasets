@@ -71,7 +71,7 @@ OR
 - https://www.sec.gov/files/dera/data/financial-statement-data-sets/2022q2.zip
 - https://www.sec.gov/files/dera/data/financial-statement-data-sets/2022q3.zip
 - https://www.sec.gov/files/dera/data/financial-statement-data-sets/2022q4.zip
-- https://www.sec.gov/files/dera/data/financial-statement-notes-data-sets/2024_02_notes.zip
+- https://www.sec.gov/files/dera/data/financial-statement-notes-data-sets/2024q1_notes.zip
 
 3. Juptyer notebooks are in the examples folder. These notebooks have been saved with output so that you know what to expect after running the code. To run the examples, open Jupyter notebook from command prompt or shell:\
 `jupyter notebook`
