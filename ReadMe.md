@@ -107,17 +107,12 @@ https://www.sec.gov/dera/data/financial-statement-and-notes-data-set
 
 ## Inspired By
 
-After sharing this project on LinkedIn, [Ian Gow](https://github.com/iangow) pointed out his own independent
-R-based pipeline for the same SEC DERA Notes datasets — built around the same end goal:
-convert raw TSVs to Parquet once, then query fast with DuckDB.
+Shoutout to [Ian Gow](https://github.com/iangow) who reached out after seeing this project.
+He built his own R-based pipeline for the same SEC DERA datasets and pointed out that
+persisting the TSVs as Parquet files and tracking Last-Modified dates for incremental updates
+were the two things that would really complete this.
 
-His R implementation is excellent and worth reading:
-https://github.com/iangow/notes
-
-The Parquet conversion and incremental `Last-Modified` tracking added in this repo were
-directly inspired by that conversation. Ian's approach in R and this Python/Polars fork
-are complementary — same efficient end-state, different languages and ecosystems.
-
----
+He was right. Those additions are now in this repo, and the benchmark shows the difference.
+If you work in R, his implementation is worth checking out: https://github.com/iangow/notes
 
 *Fork maintained by [TheChyeahhh](https://github.com/TheChyeahhh). Not affiliated with the SEC. Educational use only.*
