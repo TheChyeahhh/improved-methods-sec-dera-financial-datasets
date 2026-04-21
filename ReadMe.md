@@ -1,4 +1,4 @@
-# Python for DERA Financial Datasets — Polars Edition
+# Improved Methods: SEC DERA Financial Datasets
 
 > A modernized fork of the official SEC DERA Python repository,
 > upgraded from Pandas to Polars for dramatically faster performance
@@ -53,7 +53,7 @@ This fork is provided for educational and analytical improvement purposes.
 ## Setup
 
 ```bash
-git clone https://github.com/TheChyeahhh/python-for-dera-financial-datasets
+git clone https://github.com/TheChyeahhh/improved-methods-sec-dera-financial-datasets
 cd python-for-dera-financial-datasets
 python -m venv venv
 source venv/bin/activate        # Mac/Linux
