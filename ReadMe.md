@@ -16,21 +16,23 @@ This fork is provided for educational and analytical improvement purposes.
 
 ## What Changed
 
-| Feature     | Original (Pandas)          | This Fork (Polars)              |
-|-------------|---------------------------|----------------------------------|
-| Execution   | Eager (loads all RAM)      | Lazy (loads only what's needed) |
-| Threading   | Single-threaded            | Multi-threaded                  |
-| Speed       | Baseline                   | 10–100x faster                  |
-| Memory      | High                       | Significantly lower             |
-| SQL Support | No                         | Yes (DuckDB integration)        |
+| Feature          | Original (Pandas)          | This Fork (Polars)              |
+|------------------|---------------------------|----------------------------------|
+| Execution        | Eager (loads all RAM)      | Lazy (loads only what's needed) |
+| Threading        | Single-threaded            | Multi-threaded                  |
+| Speed            | Baseline                   | 10–100x faster                  |
+| Memory           | High                       | Significantly lower             |
+| Storage Format   | TSV only                   | TSV + Parquet (columnar)        |
+| Incremental sync | No                         | Yes (Last-Modified tracking)    |
+| SQL Support      | No                         | Yes (DuckDB integration)        |
 
 ---
 
 ## What's Included
 
 - All original DERA notebooks — rewritten in Polars
-- `Populate_Data.py` — upgraded data downloader with lazy loading
-- `benchmark.py` — Pandas vs Polars speed comparison
+- `Populate_Data.py` — upgraded downloader with Parquet conversion + incremental updates
+- `benchmark.py` — Pandas vs Polars (TSV) vs Polars (Parquet) speed comparison
 - `examples/duckdb_query_example.py` — SQL interface for power users
 
 ---
@@ -54,7 +56,7 @@ This fork is provided for educational and analytical improvement purposes.
 
 ```bash
 git clone https://github.com/TheChyeahhh/improved-methods-sec-dera-financial-datasets
-cd python-for-dera-financial-datasets
+cd improved-methods-sec-dera-financial-datasets
 python -m venv venv
 source venv/bin/activate        # Mac/Linux
 venv\Scripts\activate           # Windows
@@ -100,6 +102,21 @@ https://www.sec.gov/dera/data/financial-statement-data-sets
 
 SEC DERA Financial Statement and Notes Data Sets:
 https://www.sec.gov/dera/data/financial-statement-and-notes-data-set
+
+---
+
+## Inspired By
+
+After sharing this project on LinkedIn, [Ian Gow](https://github.com/iangow) pointed out his own independent
+R-based pipeline for the same SEC DERA Notes datasets — built around the same end goal:
+convert raw TSVs to Parquet once, then query fast with DuckDB.
+
+His R implementation is excellent and worth reading:
+https://github.com/iangow/notes
+
+The Parquet conversion and incremental `Last-Modified` tracking added in this repo were
+directly inspired by that conversation. Ian's approach in R and this Python/Polars fork
+are complementary — same efficient end-state, different languages and ecosystems.
 
 ---
 
