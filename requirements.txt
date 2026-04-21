@@ -1,7 +1,9 @@
-# core modules
-pandas
-numpy
+polars
+duckdb
+jupyter
 matplotlib
 seaborn
-IPython
 requests
+openpyxl
+pyarrow
+xlsxwriter
